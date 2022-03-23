@@ -26,8 +26,15 @@ module.exports = async ({ github, context, core }) => {
         repo: context.repo.repo,
         num: 100,
     }
+    const escapeHTML = str => str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
     const stripBody = (nodes = []) => nodes.map(item => ({
         ...item,
+        title: escapeHTML(item.title),
         body: item.body.replace(/[\r\n]/g, ''),
     }));
     const fetchAll = async () => {

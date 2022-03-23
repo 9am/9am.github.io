@@ -1,8 +1,8 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
-const BASE = 'https://github.com/9am/sample_app';
-const EMAIL = 'test@gmail.com';
+const BASE = 'https://github.com/9am/9am.github.com';
+const EMAIL = 'tech.9am@gmail.com';
 
 const rss = ({
     lastBuildDate = new Date().toUTCString(),
@@ -11,12 +11,12 @@ const rss = ({
 <rss version="2.0">
     <channel>
         <title>The 9am Blog</title>
-        <link>http://9am.github.io/sample_app/</link>
+        <link>http://9am.github.io/</link>
         <description>9am blog</description>
         <image>
-            <url>https://user-images.githubusercontent.com/1435457/152101883-570bdcf0-4d71-41f3-97f1-e3801a16cf54.jpeg</url>
+            <url>https://github.com/9am/9am.github.io/raw/main/assets/img/logo.svg</url>
             <title>9am</title>
-            <link>http://9am.github.io/sample_app/</link>
+            <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
         <lastBuildDate>${lastBuildDate}</lastBuildDate>
@@ -32,8 +32,8 @@ const item = ({
     publishedAt,
     labels,
 }) => {
-    const [, img] = body.match(/img src="([^"]*)"/) || ['', ''];
-    const [, desc] = body.match(/<mark>(.*)<\/mark>/) || ['', ''];
+    const [, img = ''] = body.match(/img [^</>]*src="([^"]*)"/) || [];
+    const [, desc = ''] = body.match(/<mark>(.*)<\/mark>/) || [];
     return `
         <item>
             <title>${title}</title>

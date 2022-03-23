@@ -400,8 +400,8 @@
         `).join('');
 
         const createItem = ({ body, number, ...rest }) => {
-            const file = body.match(/<img src=.*\/([^\/]+\.\w{3,4})/)[1];
-            const desc = body.match(/<mark>(.*)<\/mark>/)[1];
+            const [, file = ''] = body.match(/<img [^</>]*src=.*\/([^\/]+\.\w{3,4})/) || [];
+            const [, desc = ''] = body.match(/<mark>(.*)<\/mark>/) || [];
             template.innerHTML = renderIssue({
                 href: `${BASE}/issues/${number}`,
                 src: `${IMG_PROXY}/${file}`,

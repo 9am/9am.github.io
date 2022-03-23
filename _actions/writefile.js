@@ -32,8 +32,8 @@ const item = ({
     publishedAt,
     labels,
 }) => {
-    const img = body.match(/img src="([^"]*)"/)?.[1] || '';
-    const desc = body.match(/<mark>(.*)<\/mark>/)?.[1] || '';
+    const [, img] = body.match(/img src="([^"]*)"/) || ['', ''];
+    const [, desc] = body.match(/<mark>(.*)<\/mark>/) || ['', ''];
     return `
         <item>
             <title>${title}</title>

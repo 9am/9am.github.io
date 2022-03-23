@@ -4,6 +4,13 @@ const exec = util.promisify(require('child_process').exec);
 const BASE = 'https://github.com/9am/9am.github.com';
 const EMAIL = 'tech.9am@gmail.com';
 
+const escapeHTML = str => str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+
 const rss = ({
     lastBuildDate = new Date().toUTCString(),
     items = '',
@@ -38,7 +45,7 @@ const item = ({
         <item>
             <title>${title}</title>
             <link>${BASE}/issues/${number}</link>
-            <description>${desc}</description>
+            <description>${escapeHTML(desc)}</description>
             <author>${EMAIL}</author>
             <pubDate>${new Date(publishedAt).toUTCString()}</pubDate>
             <guid>${id}</guid>

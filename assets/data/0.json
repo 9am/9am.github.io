@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "I_kwDOFkEW485GH59f",
-      "title": "<img-victor> - a web component converting IMG to SVG path with a drawing effect",
+      "title": "&lt;img-victor&gt; - a web component converting IMG to SVG path with a drawing effect",
       "body": "<img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/159623065-660d5103-ba10-4b6d-91c9-7501ad07c500.svg\" width=\"200\" /><mark>How to create a web component that draws an image with lines using LSD & web worker.</mark>",
       "publishedAt": "2022-03-22T09:08:47Z",
       "number": 3,

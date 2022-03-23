@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>The 9am Blog</title>
+        <link>http://9am.github.io/sample_app/</link>
+        <description>9am blog</description>
+        <image>
+            <url>https://user-images.githubusercontent.com/1435457/152101883-570bdcf0-4d71-41f3-97f1-e3801a16cf54.jpeg</url>
+            <title>9am</title>
+            <link>http://9am.github.io/sample_app/</link>
+        </image>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 23 Mar 2022 08:35:31 GMT</lastBuildDate>
+        <managingEditor>test@gmail.com</managingEditor>
+        <item>
+            <title><img-victor> - a web component converting IMG to SVG path with a drawing effect</title>
+            <link>https://github.com/9am/sample_app/issues/3</link>
+            <description>How to create a web component that draws an image with lines using LSD & web worker.</description>
+            <author>test@gmail.com</author>
+            <pubDate>Tue, 22 Mar 2022 09:08:47 GMT</pubDate>
+            <guid>I_kwDOFkEW485GH59f</guid>
+            <enclosure url="" />
+        </item>
+        <item>
+            <title>Pray for the sunflowers</title>
+            <link>https://github.com/9am/sample_app/issues/2</link>
+            <description>No War Please</description>
+            <author>test@gmail.com</author>
+            <pubDate>Wed, 02 Mar 2022 07:04:01 GMT</pubDate>
+            <guid>I_kwDOFkEW485E8HkL</guid>
+            <enclosure url="https://user-images.githubusercontent.com/1435457/158135033-b76eb4b1-ee23-4b86-8951-a62f03f2b3f2.jpeg" />
+        </item>
+        <item>
+            <title>9am blog</title>
+            <link>https://github.com/9am/sample_app/issues/1</link>
+            <description></description>
+            <author>test@gmail.com</author>
+            <pubDate>Wed, 02 Feb 2022 06:26:19 GMT</pubDate>
+            <guid>I_kwDOFkEW485C2aJn</guid>
+            <enclosure url="https://user-images.githubusercontent.com/1435457/152101883-570bdcf0-4d71-41f3-97f1-e3801a16cf54.jpeg" />
+        </item>
+    </channel>
+</rss>

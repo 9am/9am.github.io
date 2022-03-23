@@ -1,0 +1,51 @@
+name: PUBLISH
+
+on:
+  workflow_dispatch:
+    inputs:
+      pageSize:
+        description: 'Page size'
+        required: true
+        default: 10
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: pages
+      - name: Fetch
+        uses: actions/github-script@v5
+        id: fetch
+        with:
+          script: |
+            const script = require('./_actions/fetch.js');
+            const data = await script({ github, context, core });
+            return data;
+      - name: Pagination
+        uses: actions/github-script@v5
+        id: pagination
+        env:
+          DATA: ${{ steps.fetch.outputs.result }}
+        with:
+          script: |
+            const script = require('./_actions/pagination.js');
+            const data = script({ github, context, core });
+            return data;
+      - name: Write
+        uses: actions/github-script@v5
+        env:
+          DATA: ${{ steps.pagination.outputs.result }}
+        with:
+          script: |
+            const script = require('./_actions/writefile.js');
+            await script({ github, context, core });
+      - name: Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add ./assets/data
+          git commit -m "update data by action"
+          git push

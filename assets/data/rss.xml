@@ -10,11 +10,11 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Wed, 23 Mar 2022 09:23:53 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Mar 2022 09:31:28 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
         <item>
             <title>&lt;img-victor&gt; - a web component converting IMG to SVG path with a drawing effect</title>
-            <link>https://github.com/9am/9am.github.com/issues/3</link>
+            <link>https://github.com/9am/9am.github.io/issues/3</link>
             <description>How to create a web component that draws an image with lines using LSD &amp; web worker.</description>
             <author>tech.9am@gmail.com</author>
             <pubDate>Tue, 22 Mar 2022 09:08:47 GMT</pubDate>
@@ -23,7 +23,7 @@
         </item>
         <item>
             <title>Pray for the sunflowers</title>
-            <link>https://github.com/9am/9am.github.com/issues/2</link>
+            <link>https://github.com/9am/9am.github.io/issues/2</link>
             <description>No War Please</description>
             <author>tech.9am@gmail.com</author>
             <pubDate>Wed, 02 Mar 2022 07:04:01 GMT</pubDate>
@@ -32,7 +32,7 @@
         </item>
         <item>
             <title>9am blog</title>
-            <link>https://github.com/9am/9am.github.com/issues/1</link>
+            <link>https://github.com/9am/9am.github.io/issues/1</link>
             <description></description>
             <author>tech.9am@gmail.com</author>
             <pubDate>Wed, 02 Feb 2022 06:26:19 GMT</pubDate>

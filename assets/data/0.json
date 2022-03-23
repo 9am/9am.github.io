@@ -3,7 +3,7 @@
     {
       "id": "I_kwDOFkEW485GH59f",
       "title": "&lt;img-victor&gt; - a web component converting IMG to SVG path with a drawing effect",
-      "body": "<img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/159623065-660d5103-ba10-4b6d-91c9-7501ad07c500.svg\" width=\"200\" /><mark>How to create a web component that draws an image with lines using LSD & web worker.</mark>",
+      "body": "<img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/159623065-660d5103-ba10-4b6d-91c9-7501ad07c500.svg\" width=\"100\" /><mark>How to create a web component that draws an image with lines using LSD & web worker.</mark>",
       "publishedAt": "2022-03-22T09:08:47Z",
       "number": 3,
       "labels": {
@@ -26,7 +26,7 @@
     {
       "id": "I_kwDOFkEW485E8HkL",
       "title": "Pray for the sunflowers",
-      "body": "<img src=\"https://user-images.githubusercontent.com/1435457/158135033-b76eb4b1-ee23-4b86-8951-a62f03f2b3f2.jpeg\" alt=\"senbazuru\" width=\"100px\" height=\"100px\"><mark>No War Please</mark>",
+      "body": "<img src=\"https://user-images.githubusercontent.com/1435457/158135033-b76eb4b1-ee23-4b86-8951-a62f03f2b3f2.jpeg\" alt=\"senbazuru\" width=\"100\" /><mark>No War Please</mark>",
       "publishedAt": "2022-03-02T07:04:01Z",
       "number": 2,
       "labels": {
@@ -36,7 +36,7 @@
     {
       "id": "I_kwDOFkEW485C2aJn",
       "title": "9am blog",
-      "body": "<img src=\"https://user-images.githubusercontent.com/1435457/152101883-570bdcf0-4d71-41f3-97f1-e3801a16cf54.jpeg\" alt=\"9am\" width=\"100px\" height=\"100px\"> ",
+      "body": "<img src=\"https://user-images.githubusercontent.com/1435457/159673139-f955d377-8868-4265-b40a-b9a22c73cf90.jpeg\" alt=\"9am\" width=\"100\" />",
       "publishedAt": "2022-02-02T06:26:19Z",
       "number": 1,
       "labels": {

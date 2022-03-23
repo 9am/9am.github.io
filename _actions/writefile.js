@@ -1,7 +1,7 @@
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
-const BASE = 'https://github.com/9am/9am.github.com';
+const BASE = 'https://github.com/9am/9am.github.io';
 const EMAIL = 'tech.9am@gmail.com';
 
 const escapeHTML = str => str

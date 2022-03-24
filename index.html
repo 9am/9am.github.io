@@ -43,8 +43,8 @@
             --color-dark: #24292f;
             --color-normal: dimgrey;
             --color-light: whitesmoke;
-            --shadow-ele-t: 6px 6px 16px rgb(217, 210, 200, 0.52);
-            --shadow-ele-b: -6px -6px 16px rgb(255, 255, 255, 0.84);
+            --shadow-ele-t: 8px 8px 24px rgb(217, 210, 200, 0.52);
+            --shadow-ele-b: -8px -8px 24px rgb(255, 255, 255, 0.84);
             --border-ele: 1px solid rgba(255, 255, 255, 0.2);
             --banner-size: 120px;
             --victor-stroke: var(--color-normal);
@@ -158,6 +158,13 @@
             align-items: center;
             padding: 4px;
         }
+        .info .title {
+            font-weight: normal;
+        }
+        .info .desc {
+            font-weight: lighter;
+            line-height: 1.2em;
+        }
         .info .date {
             font-size: small;
             color: #999;
@@ -200,7 +207,10 @@
             width: 100%;
         }
         .button-group .button {
-            margin: 0 var(--s-1) var(--s-1) var(--s-1);
+            margin: 0 var(--s-3) var(--s-3) 0;
+        }
+        .button-group .button:first-child {
+            margin-left: var(--s-3);
         }
         .button-group .button:last-child {
             margin-left: auto;
@@ -472,10 +482,12 @@
                 'seed',
                 Math.floor(Math.random() * 1000),
             );
-            // contour.querySelector('feComponentTransfer feFuncA').setAttribute(
-            //     'exponent',
-            //     Math.random() * 0.2 + 0.7,
-            // );
+            // adjust light for firefox
+            if (Boolean(~navigator.userAgent.indexOf("Firefox"))) {
+                [...contour.querySelectorAll(
+                    'feComponentTransfer[in=light] *',
+                )].forEach(node => node.setAttribute('slope', 2));
+            }
             // contour.querySelector('feDiffuseLighting').setAttribute(
             //     'surfaceScale',
             //     Math.floor(Math.random() * 10 + 20),
@@ -487,9 +499,9 @@
             moreBtn.addEventListener('click', loadMore);
             window.addEventListener('scroll', onActive);
             window.addEventListener('resize', onActive);
+            try { generateTile() } catch (err) {};
             try {
                 await loadMore();
-                generateTile();
             } catch (err) {
                 console.log('fail:', err);
             }

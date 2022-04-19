@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Wed, 23 Mar 2022 09:59:30 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 Apr 2022 10:25:24 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>Headline Hopps</title>
+            <link>https://github.com/9am/9am.github.io/issues/4</link>
+            <description>Using 50 lines of plain javascript to build a browser add-on to show all the headlines on a page and navigate between them.</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Tue, 19 Apr 2022 10:12:46 GMT</pubDate>
+            <guid>I_kwDOFkEW485IAp1G</guid>
+            <enclosure url="https://user-images.githubusercontent.com/1435457/163982951-ae10a2c1-5e06-4230-b325-cee7bb47be4e.jpeg" />
+        </item>
         <item>
             <title>&lt;img-victor&gt; - a web component converting IMG to SVG path with a drawing effect</title>
             <link>https://github.com/9am/9am.github.io/issues/3</link>

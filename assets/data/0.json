@@ -3,7 +3,7 @@
     {
       "id": "I_kwDOFkEW485IAp1G",
       "title": "Headline Hopps",
-      "body": "<img alt=\"hopps\" src=\"https://user-images.githubusercontent.com/1435457/163982951-ae10a2c1-5e06-4230-b325-cee7bb47be4e.jpeg\" width=\"100\" /><mark>Using 50 lines of plain javascript to build a browser add-on to show all the headlines on a page and navigate between them.</mark>",
+      "body": "<img alt=\"headline-hopps\" src=\"https://user-images.githubusercontent.com/1435457/164585073-ff55d56d-aba3-4e2b-87f2-00c3268edcbc.jpeg\" width=\"100\" /><mark>Using 50 lines of plain javascript to build a browser add-on to show all the headlines on a page and navigate between them.</mark>",
       "publishedAt": "2022-04-19T10:12:46Z",
       "number": 4,
       "labels": {
@@ -19,7 +19,7 @@
     },
     {
       "id": "I_kwDOFkEW485GH59f",
-      "title": "&lt;img-victor&gt; - a web component converting IMG to SVG path with a drawing effect",
+      "title": "&lt; img-victor &gt;",
       "body": "<img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/159623065-660d5103-ba10-4b6d-91c9-7501ad07c500.svg\" width=\"100\" /><mark>How to create a web component that draws an image with lines using LSD & web worker.</mark>",
       "publishedAt": "2022-03-22T09:08:47Z",
       "number": 3,

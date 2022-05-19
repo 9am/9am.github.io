@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Fri, 22 Apr 2022 02:38:10 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 May 2022 09:27:37 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>&lt; img-tissue &gt;</title>
+            <link>https://github.com/9am/9am.github.io/issues/5</link>
+            <description>How to make a minimization effect with canvas.</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Thu, 19 May 2022 09:11:29 GMT</pubDate>
+            <guid>I_kwDOFkEW485J_2Kc</guid>
+            <enclosure url="https://user-images.githubusercontent.com/1435457/169257715-cfe371df-1d83-4770-afbe-2367507c2958.svg" />
+        </item>
         <item>
             <title>Headline Hopps</title>
             <link>https://github.com/9am/9am.github.io/issues/4</link>

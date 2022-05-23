@@ -18,17 +18,54 @@ template.innerHTML = `
             position: relative;
             font-size: 0;
             overflow: hidden;
+            --victor-stroke: dimgray;
+            --victor-stroke-width: 0.3%;
+            --victor-stroke-linecap: round;
+            --victor-duration: 3200ms;
+            --victor-timing-function: ease-in-out;
+        }
+        :host(:hover) img {
+            filter: opacity(1) brightness(1) blur(0);
+        }
+        :host(:hover) path {
+            stroke-dashoffset: var(--dashoffset);
+        }
+        svg {
+            position: relative;
+            z-index: 1;
+            --dasharray: 0;
+            --dashoffset: 0;
         }
         path {
-            stroke: var(--victor-stroke, dimgray);
-            stroke-width: var(--victor-stroke-width, 0.2%);
-            stroke-linecap: var(--victor-stroke-linecap, round);
+            will-change: stroke-dashoffset;
+            fill: none;
+            stroke: var(--victor-stroke);
+            stroke-width: var(--victor-stroke-width);
+            stroke-linecap: var(--victor-stroke-linecap);
+            stroke-dasharray: var(--dasharray);
+            stroke-dashoffset: var(--dashoffset);
+        }
+        path.ready {
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset var(--victor-duration) var(--victor-timing-function);
+        }
+        img {
+            will-change: filter;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+            z-index: 0;
+            filter: opacity(0) brightness(20) blur(4px);
+            transition: filter var(--victor-duration) var(--victor-timing-function);
         }
         .loading {
             position: absolute;
             background-color: lightgray;
             width: 100%;
             height: 100%;
+            z-index: 2;
         }
         .loading::after {
             display: block;
@@ -49,8 +86,9 @@ template.innerHTML = `
     <section id="loading"></section>
     <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" role="img" aria-labelledby="title">
         <title id="title"></title>
-        <path id="path" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" />
+        <path id="path" />
     </svg>
+    <img id="img" part="img" />
 `;
 
 
@@ -67,6 +105,7 @@ const getComponent = ({
         return new Promise((resolve, reject) => {
             let img = new Image();
             img.crossOrigin = 'anonymous';
+            img.id = 'img';
             img.onload = () => {
                 try {
                     const canvas = document.createElement('canvas');
@@ -79,7 +118,10 @@ const getComponent = ({
                     canvas.height = height;
                     ctx.filter = 'grayscale(1)';
                     ctx.drawImage(img, 0, 0, width, height);
-                    resolve(ctx.getImageData(0, 0, width, height));
+                    resolve({
+                        img,
+                        imgData: ctx.getImageData(0, 0, width, height),
+                    });
                 } catch (error) {
                     reject(error);
                 }
@@ -94,6 +136,7 @@ const getComponent = ({
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         this._$svg = this.shadowRoot.querySelector('#svg');
+        this._$img = this.shadowRoot.querySelector('#img');
         this._$path = this.shadowRoot.querySelector('#path');
         this._$loading = this.shadowRoot.querySelector('#loading');
         this._$title = this.shadowRoot.querySelector('#title');
@@ -112,7 +155,10 @@ const getComponent = ({
                 }
                 try {
                     this._$loading.className = 'loading';
-                    this._img = await ImageVictor.loadImage(this.src);
+                    const { img, imgData } = await ImageVictor.loadImage(this.src);
+                    this._$img.parentNode.replaceChild(img, this._$img);
+                    this._$img = img;
+                    this._img = imgData;
                     await this._renderPath();
                 } finally {
                     this._$loading.className = '';
@@ -151,17 +197,11 @@ const getComponent = ({
                 return ele.getTotalLength();
             },
         ));
-        this._$path.style.strokeDasharray = len;
-        this._$path.animate(
-            [
-                { strokeDashoffset: len },
-                { strokeDashoffset: 0 },
-            ],
-            {
-                duration: duration,
-                // iterations: Infinity,
-            },
-        );
+        this._$path.classList.remove('ready');
+        this._$svg.style.setProperty('--dasharray', len);
+        this._$svg.style.setProperty('--dashoffset', len);
+        this._$path.getBoundingClientRect();
+        this._$path.classList.add('ready');
     }
 
     get src() {
@@ -214,7 +254,6 @@ export const register = async ({
     worker = createWorker,
     poolSize = 2,
     tagName = 'img-victor',
-    duration = 5000,
 }) => {
     try {
         const pool = new Pool({
@@ -225,7 +264,6 @@ export const register = async ({
         });
         const Component = getComponent({
             pool,
-            duration,
         });
         window.customElements.define(
             tagName,

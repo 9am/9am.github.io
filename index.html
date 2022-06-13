@@ -120,7 +120,8 @@
             box-shadow: var(--shadow-ele-t), var(--shadow-ele-b);
             color: var(--color-normal);
         }
-        .button:active:hover {
+        .button:active:hover,
+        .button:disabled {
             box-shadow: inset var(--shadow-ele-t), inset var(--shadow-ele-b);
             color: var(--color-dark);
         }
@@ -161,8 +162,8 @@
             font-weight: normal;
         }
         .info .desc {
-            font-weight: lighter;
             line-height: 1.2em;
+            color: var(--color-normal);
         }
         .info .date {
             font-size: small;

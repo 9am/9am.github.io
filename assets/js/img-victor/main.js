@@ -24,11 +24,13 @@ template.innerHTML = `
             --victor-duration: 3200ms;
             --victor-timing-function: ease-in-out;
         }
-        :host(:hover) img {
-            filter: opacity(1) brightness(1) blur(0);
-        }
-        :host(:hover) path {
-            stroke-dashoffset: var(--dashoffset);
+         @media (hover) {
+            :host(:hover) img {
+                filter: opacity(1) brightness(1) blur(0);
+            }
+            :host(:hover) path {
+                stroke-dashoffset: var(--dashoffset);
+            }
         }
         svg {
             position: relative;

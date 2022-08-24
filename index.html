@@ -412,7 +412,7 @@
         }) => `
             <article class="item" data-next="${next}">
                 <a class="button" href="${href}" target="_blank">
-                    <img-victor class="victor" data-src="${src}"></img-victor>
+                    <img-victor class="victor" data-src="${src}" ratio="1:1"></img-victor>
                 </a>
                 <section class="info">
                     <h2 class="title">${title}</h2>
@@ -454,40 +454,6 @@
             if (pageInfo.hasNextPage) {
                 pending(false);
             }
-            active();
-        };
-
-        const inViewport = (el, percent = 0.2) => {
-            if (!el) {
-                return false;
-            }
-            const { top, height } = el.getBoundingClientRect();
-            return (top >= 0
-                && (top + height * percent) <= (window.innerHeight || document.documentElement.clientHeight)
-            );
-        };
-
-        const active = () => {
-            const victors = [...document.querySelectorAll('.victor[data-src]')];
-            victors.forEach(victor => {
-                if (inViewport(victor)) {
-                    victor.src = victor.dataset.src;
-                    delete victor.dataset.src;
-                }
-            });
-        };
-
-        const throttle = (fn, delay = 500) => {
-            let timer = null;
-            return (...args) => {
-                if (timer) {
-                    return;
-                }
-                timer = setTimeout(() => {
-                    fn(args);
-                    timer = null;
-                }, delay);
-            };
         };
 
         const generateTile = () => {
@@ -515,10 +481,7 @@
         };
 
         (async () => {
-            const onActive = throttle(active);
             moreBtn.addEventListener('click', loadMore);
-            window.addEventListener('scroll', onActive);
-            window.addEventListener('resize', onActive);
             try {
                 generateTile();
                 generateGradient();

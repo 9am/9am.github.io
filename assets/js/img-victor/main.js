@@ -21,60 +21,74 @@ template.innerHTML = `
             --victor-stroke: dimgray;
             --victor-stroke-width: 0.3%;
             --victor-stroke-linecap: round;
+            --victor-stroke-linejoin: round;
             --victor-duration: 3200ms;
             --victor-timing-function: ease-in-out;
+            --victor-filter: url(#brush);
         }
-         @media (hover) {
-            :host(:hover) img {
+        @media (hover) {
+            :host(:hover) #img {
                 filter: opacity(1) brightness(1) blur(0);
             }
-            :host(:hover) path {
+            :host(.active:hover) #path.ready {
                 stroke-dashoffset: var(--dashoffset);
             }
         }
-        svg {
-            position: relative;
+        #svg {
+            position: absolute;
             z-index: 1;
             --dasharray: 0;
             --dashoffset: 0;
         }
-        path {
+        #path {
             will-change: stroke-dashoffset;
             fill: none;
             stroke: var(--victor-stroke);
             stroke-width: var(--victor-stroke-width);
             stroke-linecap: var(--victor-stroke-linecap);
+            stroke-linejoin: var(--victor-stroke-linejoin);
             stroke-dasharray: var(--dasharray);
             stroke-dashoffset: var(--dashoffset);
+            filter: var(--victor-filter);
         }
-        path.ready {
-            stroke-dashoffset: 0;
+        #path.ready {
             transition: stroke-dashoffset var(--victor-duration) var(--victor-timing-function);
         }
-        img {
-            will-change: filter;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
+        :host(.active) #path.ready {
+            stroke-dashoffset: 0;
+        }
+        :host(:not(.active)) #path.ready {
+            stroke-dashoffset: var(--dashoffset);
+        }
+        #img {
             width: 100%;
-            z-index: 0;
+            height: 100%;
+            object-position: center;
+            object-fit: contain;
+            will-change: filter;
             filter: opacity(0) brightness(20) blur(4px);
             transition: filter var(--victor-duration) var(--victor-timing-function);
         }
-        .loading {
-            position: absolute;
-            background-color: lightgray;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-        }
-        .loading::after {
+        :host(.loading)::before {
             display: block;
             content: "";
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            z-index: 2;
+            background-color: lightgray;
+        }
+        :host(.loading)::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
             transform: translateX(-100%);
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             animation: loading 1.2s infinite;
@@ -85,125 +99,146 @@ template.innerHTML = `
             }
         }
     </style>
-    <section id="loading"></section>
     <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" role="img" aria-labelledby="title">
+        <defs>
+            <filter id="brush">
+                <feTurbulence
+                    baseFrequency="0.08"
+                    numOctaves="9"
+                    seed="1"
+                    result="turbulence"
+                />
+                <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="turbulence"
+                    scale="10"
+                />
+            </filter>
+        </defs>
         <title id="title"></title>
         <path id="path" />
     </svg>
-    <img id="img" part="img" />
+    <image id="img" src="" part="img" crossorigin="anonymous" />
 `;
 
 
 const getComponent = ({
     pool,
     e = 50e5,
-    duration = 5000,
 }) => class ImageVictor extends HTMLElement {
+    #svg;
+    #img;
+    #path;
+    #title;
+    #imgData;
+    #dList;
+    #io;
+
     static get observedAttributes() {
         return ['src', 'title'];
-    }
-
-    static loadImage(url = '') {
-        return new Promise((resolve, reject) => {
-            let img = new Image();
-            img.crossOrigin = 'anonymous';
-            img.id = 'img';
-            img.onload = () => {
-                try {
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d', { alpha: false });
-                    const scale = Math.round(Math.sqrt(e / img.width / img.height));
-                    const width = img.width * scale;
-                    const height = img.height * scale;
-                    ctx.imageSmoothingEnabled = false;
-                    canvas.width = width;
-                    canvas.height = height;
-                    ctx.filter = 'grayscale(1)';
-                    ctx.drawImage(img, 0, 0, width, height);
-                    resolve({
-                        img,
-                        imgData: ctx.getImageData(0, 0, width, height),
-                    });
-                } catch (error) {
-                    reject(error);
-                }
-            };
-            img.onerror = error => reject(error);
-            img.src = url;
-        });
     }
 
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
-        this._$svg = this.shadowRoot.querySelector('#svg');
-        this._$img = this.shadowRoot.querySelector('#img');
-        this._$path = this.shadowRoot.querySelector('#path');
-        this._$loading = this.shadowRoot.querySelector('#loading');
-        this._$title = this.shadowRoot.querySelector('#title');
-        this._img = {};
-        this._dList = [];
+        this.#svg = this.shadowRoot.querySelector('#svg');
+        this.#img = this.shadowRoot.querySelector('#img');
+        this.#path = this.shadowRoot.querySelector('#path');
+        this.#title = this.shadowRoot.querySelector('#title');
+        this.#imgData = {};
+        this.#dList = [];
+        this.#img.addEventListener('load', this.#onImageLoaded);
+        this.#img.addEventListener('error', this.#onImageError);
+        this.#preserveRatio();
     }
 
-    async attributeChangedCallback(name, prev, next) {
+    #getDataFromImage(img) {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d', { alpha: false });
+        const scale = Math.round(Math.sqrt(e / img.naturalWidth / img.naturalHeight));
+        const width = img.naturalWidth * scale;
+        const height = img.naturalHeight * scale;
+        this.ratio = `${img.naturalWidth}:${img.naturalHeight}`;
+        ctx.imageSmoothingEnabled = false;
+        canvas.width = width;
+        canvas.height = height;
+        ctx.filter = 'grayscale(1)';
+        ctx.drawImage(img, 0, 0, width, height);
+        return ctx.getImageData(0, 0, width, height);
+    }
+
+    #onImageError = (err) => {
+        this.shadowRoot.host.classList.remove('loading');
+        throw err;
+    }
+
+    #onImageLoaded = async (evt) => {
+        if (evt.target.getAttribute('src').match(/data:image\/svg\+xml/)) {
+            return;
+        }
+        this.#imgData = this.#getDataFromImage(evt.target);
+        await this.#renderPath();
+        this.shadowRoot.host.classList.remove('loading');
+    }
+
+    #preserveRatio() {
+        const [width, height] = this.ratio?.split(':') || [];
+        if (width && height) {
+            this.#img.setAttribute('src', `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}"%3E%3C/svg%3E`);
+        }
+    }
+
+    attributeChangedCallback(name, prev, next) {
         if (prev === next) {
             return;
         }
         switch (name) {
-            case 'src':
+            case 'src': {
                 if (!this.src) {
                     break;
                 }
-                try {
-                    this._$loading.className = 'loading';
-                    const { img, imgData } = await ImageVictor.loadImage(this.src);
-                    this._$img.parentNode.replaceChild(img, this._$img);
-                    this._$img = img;
-                    this._img = imgData;
-                    await this._renderPath();
-                } finally {
-                    this._$loading.className = '';
-                }
+                this.shadowRoot.host.classList.add('loading');
+                this.#img.setAttribute('src', this.src);
                 break;
+            }
             case 'title':
-                this._renderTitle();
+                this.#title.textContent = this.title;
                 break;
             default:
                 break;
         }
     }
 
-    _renderTitle() {
-        this._$title.textContent = this.title;
-    }
-
-    async _renderPath() {
-        if (!this._img.data) {
+    async #renderPath() {
+        if (!this.#imgData.data) {
             return;
         }
-        const [lines, groups] = await pool.addTask(this._img);
-        this._dList = groups.map(
+        const [lines, groups] = await pool.addTask(this.#imgData);
+        this.#dList = groups.map(
             group => 'M' + group.map(([x1, y1, x2, y2]) => `${x1},${y1} L${x2},${y2} `).join('L'),
         );
-        this._$path.setAttribute('d', this._dList.join(''));
-        this._$svg.setAttribute('viewBox', `0 0 ${this._img.width} ${this._img.height}`);
+        this.#path.setAttribute('d', this.#dList.join(''));
+        this.#svg.setAttribute('viewBox', `0 0 ${this.#imgData.width} ${this.#imgData.height}`);
         this.draw();
     }
 
     draw() {
-        const len = Math.max.apply(null, this._dList.map(
+        const len = Math.max.apply(null, this.#dList.map(
             d => {
                 const ele = document.createElementNS('http://www.w3.org/2000/svg', 'path');
                 ele.setAttribute('d', d);
                 return ele.getTotalLength();
             },
         ));
-        this._$path.classList.remove('ready');
-        this._$svg.style.setProperty('--dasharray', len);
-        this._$svg.style.setProperty('--dashoffset', len);
-        this._$path.getBoundingClientRect();
-        this._$path.classList.add('ready');
+        this.#path.classList.remove('ready');
+        this.#svg.style.setProperty('--dasharray', len);
+        this.#svg.style.setProperty('--dashoffset', len);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                this.#path.classList.add('ready')
+            });
+        });
     }
 
     get src() {
@@ -222,19 +257,53 @@ const getComponent = ({
         this.setAttribute('title', val);
     }
 
-    connectedCallback() {
-        if (!this.hasAttribute('src')) {
-            this.setAttribute('src', '');
+    get ratio() {
+        return this.getAttribute('ratio');
+    }
+
+    set ratio(val = '') {
+        this.setAttribute('ratio', val);
+    }
+
+    get manual() {
+        return this.hasAttribute('manual');
+    }
+
+    set manual(val = false) {
+        if (val) {
+            this.setAttribute('maual', '');
+        } else {
+            this.removeAttribute('maual');
         }
     }
 
+    connectedCallback() {
+        if (!this.src) {
+            this.src = '';
+        }
+
+        this.#io = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const visible = entry.intersectionRatio > 0
+                if (visible) {
+                    entry.target.src = entry.target.dataset?.src || entry.target.src;
+                }
+                if (!this.manual) {
+                    entry.target.classList.toggle('active', visible);
+                }
+            })
+        })
+        this.#io.observe(this.shadowRoot.host);
+    }
+
     disconnectedCallback() {
-        this._$svg = null;
-        this._$path = null;
-        this._$loading = null;
-        this._$title = null;
-        this._img = null;
-        this._dList = null;
+        this.#io.unobserve(this.shadowRoot.host);
+        this.#svg = null;
+        this.#path = null;
+        this.#title = null;
+        this.#img = null;
+        this.#imgData = null;
+        this.#dList = null;
     }
 }
 

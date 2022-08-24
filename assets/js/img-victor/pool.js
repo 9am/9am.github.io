@@ -46,7 +46,7 @@ class Pool {
     }
 
     async _getWorker() {
-        return new Promise(resolve => {
+        return new Promise((resolve, reject) => {
             if (this._workers.length) {
                 this._running++;
                 resolve(this._workers.pop());

@@ -164,6 +164,7 @@
             display: flex;
             align-items: center;
             --victor-stroke: var(--color-normal);
+            --victor-filter: none;
         }
         .info .title {
             font-weight: normal;
@@ -404,6 +405,7 @@
         const renderIssue = ({
             href,
             src,
+            ratio,
             title,
             desc,
             publishedAt,
@@ -412,7 +414,7 @@
         }) => `
             <article class="item" data-next="${next}">
                 <a class="button" href="${href}" target="_blank">
-                    <img-victor class="victor" data-src="${src}" ratio="1:1"></img-victor>
+                    <img-victor class="victor" data-src="${src}" ratio="${ratio}"></img-victor>
                 </a>
                 <section class="info">
                     <h2 class="title">${title}</h2>
@@ -429,9 +431,11 @@
         const createItem = ({ body, number, ...rest }) => {
             const [, file = ''] = body.match(/<img [^</>]*src=.*\/([^\/]+\.\w{3,4})/) || [];
             const [, desc = ''] = body.match(/<mark>(.*)<\/mark>/) || [];
+            const [, ratio = '1:1'] = body.match(/data-ratio="([\d:]*)"/) || [];
             template.innerHTML = renderIssue({
                 href: `${BASE}/issues/${number}`,
                 src: `${IMG_PROXY}/${file}`,
+                ratio,
                 desc,
                 ...rest,
             });

@@ -1,9 +1,23 @@
 {
   "nodes": [
     {
+      "id": "I_kwDOFkEW485QtH9b",
+      "title": "My Takes on Blogging with GitHub",
+      "body": "<blockquote>Is it possible to host a tech blog with GitHub only?</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/187337085-4bd72ed9-0e70-4874-b3a1-c694ddbd9764.jpeg\" alt=\"keyboard\" width=\"100%\" data-ratio=\"640:427\" />",
+      "publishedAt": "2022-08-29T09:50:34Z",
+      "number": 8,
+      "labels": {
+        "nodes": [
+          {
+            "name": "musing"
+          }
+        ]
+      }
+    },
+    {
       "id": "I_kwDOFkEW485Ot52w",
       "title": "Light a &#39;Fire&#39; with Canvas and Particles.",
-      "body": "<img width=\"100px\" data-ratio=\"640:853\" alt=\"tools\" src=\"https://user-images.githubusercontent.com/1435457/181480584-8b3635ce-f06f-4e67-a9dd-14135a0d1939.jpeg\" /><mark>A simple way to draw a dynamic fire flame on the page.</mark>",
+      "body": "<blockquote>A simple way to draw a dynamic fire flame on the page.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/181480584-8b3635ce-f06f-4e67-a9dd-14135a0d1939.jpeg\" alt=\"tools\" width=\"100%\" data-ratio=\"640:853\" />",
       "publishedAt": "2022-07-28T09:31:15Z",
       "number": 7,
       "labels": {
@@ -20,7 +34,7 @@
     {
       "id": "I_kwDOFkEW485LogdZ",
       "title": "Call APIs Before It Existed? Sure!",
-      "body": "<img width=\"100px\" data-ratio=\"4:3\" alt=\"tools\" src=\"https://user-images.githubusercontent.com/1435457/173283474-fc89df74-c959-47d3-a094-5da58dc7f0b2.jpeg\" /><mark></mark>",
+      "body": "<blockquote></blockquote><img src=\"https://user-images.githubusercontent.com/1435457/173283474-fc89df74-c959-47d3-a094-5da58dc7f0b2.jpeg\" alt=\"tools\" width=\"100%\" data-ratio=\"4:3\" />",
       "publishedAt": "2022-06-13T05:07:04Z",
       "number": 6,
       "labels": {
@@ -34,7 +48,7 @@
     {
       "id": "I_kwDOFkEW485J_2Kc",
       "title": "&lt; img-tissue &gt;",
-      "body": "<img alt=\"triangle\" src=\"https://user-images.githubusercontent.com/1435457/186380370-e70a8be0-dd18-48d5-8bcf-286ccebf1b9a.svg\" width=\"100\" /><mark>How to make a minimization effect with canvas.</mark>",
+      "body": "<blockquote>How to make a minimization effect with canvas.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/186380370-e70a8be0-dd18-48d5-8bcf-286ccebf1b9a.svg\" alt=\"triangle\" width=\"100%\" />",
       "publishedAt": "2022-05-19T09:11:29Z",
       "number": 5,
       "labels": {
@@ -54,7 +68,7 @@
     {
       "id": "I_kwDOFkEW485IAp1G",
       "title": "Headline Hopps",
-      "body": "<img alt=\"headline-hopps\" src=\"https://user-images.githubusercontent.com/1435457/164585073-ff55d56d-aba3-4e2b-87f2-00c3268edcbc.jpeg\" width=\"100\" data-ratio=\"88:67\" /><mark>Using 50 lines of plain javascript to build a browser add-on to show all the headlines on a page and navigate between them.</mark>",
+      "body": "<blockquote>Using 50 lines of plain javascript to build a browser add-on to show all the headlines on a page and navigate between them.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/164585073-ff55d56d-aba3-4e2b-87f2-00c3268edcbc.jpeg\" alt=\"headline-hopps\" width=\"100%\" data-ratio=\"88:67\" />",
       "publishedAt": "2022-04-19T10:12:46Z",
       "number": 4,
       "labels": {
@@ -71,7 +85,7 @@
     {
       "id": "I_kwDOFkEW485GH59f",
       "title": "&lt; img-victor &gt;",
-      "body": "<img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/186380186-952569b1-f8f8-4fe4-ab56-d33acf943e4a.svg\" width=\"100\" /><mark>How to create a web component that draws an image with lines using LSD & web worker.</mark>",
+      "body": "<blockquote>How to create a web component that draws an image with lines using LSD & web worker.</blockquote><img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/186380186-952569b1-f8f8-4fe4-ab56-d33acf943e4a.svg\" width=\"100%\" />",
       "publishedAt": "2022-03-22T09:08:47Z",
       "number": 3,
       "labels": {
@@ -94,25 +108,33 @@
     {
       "id": "I_kwDOFkEW485E8HkL",
       "title": "Pray for The Sunflowers",
-      "body": "<img src=\"https://user-images.githubusercontent.com/1435457/158135033-b76eb4b1-ee23-4b86-8951-a62f03f2b3f2.jpeg\" alt=\"senbazuru\" width=\"100\" data-ratio=\"100:105\" /><mark>No War Please</mark>",
+      "body": "<blockquote>No War Please</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/158135033-b76eb4b1-ee23-4b86-8951-a62f03f2b3f2.jpeg\" alt=\"sunflower\" width=\"100%\"  data-ratio=\"100:105\" />",
       "publishedAt": "2022-03-02T07:04:01Z",
       "number": 2,
       "labels": {
-        "nodes": []
+        "nodes": [
+          {
+            "name": "musing"
+          }
+        ]
       }
     },
     {
       "id": "I_kwDOFkEW485C2aJn",
       "title": "9am Blog",
-      "body": "<img src=\"https://user-images.githubusercontent.com/1435457/159673139-f955d377-8868-4265-b40a-b9a22c73cf90.jpeg\" alt=\"9am\" width=\"100\" />",
+      "body": "<blockquote></blockquote><img src=\"https://user-images.githubusercontent.com/1435457/159673139-f955d377-8868-4265-b40a-b9a22c73cf90.jpeg\" alt=\"9am\" width=\"100%\" />",
       "publishedAt": "2022-02-02T06:26:19Z",
       "number": 1,
       "labels": {
-        "nodes": []
+        "nodes": [
+          {
+            "name": "musing"
+          }
+        ]
       }
     }
   ],
-  "totalCount": 7,
+  "totalCount": 8,
   "pageInfo": {
     "hasNextPage": false,
     "nextPage": 1

@@ -40,7 +40,7 @@ const item = ({
     labels,
 }) => {
     const [, img = ''] = body.match(/img [^</>]*src="([^"]*)"/) || [];
-    const [, desc = ''] = body.match(/<mark>(.*)<\/mark>/) || [];
+    const [, desc = ''] = body.match(/<blockquote>(.*)<\/blockquote>/) || [];
     return `
         <item>
             <title>${title}</title>

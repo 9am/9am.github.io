@@ -148,7 +148,7 @@
         .item {
             display: flex;
             flex-direction: column;
-            flex: 0 0 50%;
+            flex: 0 0 20%;
             padding: var(--s-3);
         }
         .item > .button {
@@ -237,11 +237,6 @@
         @media (prefers-color-scheme: dark) {
             html {
                 filter: invert(1) hue-rotate(.5turn);
-            }
-        }
-        @media not (hover: hover) {
-            .item .victor {
-                --victor-filter: none;
             }
         }
         @media screen and (max-width: 1920px) {

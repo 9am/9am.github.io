@@ -164,7 +164,6 @@
             display: flex;
             align-items: center;
             --victor-stroke: var(--color-normal);
-            --victor-filter: none;
         }
         .info .title {
             font-weight: normal;
@@ -238,6 +237,11 @@
         @media (prefers-color-scheme: dark) {
             html {
                 filter: invert(1) hue-rotate(.5turn);
+            }
+        }
+        @media not (hover: hover) {
+            .item .victor {
+                --victor-filter: none;
             }
         }
         @media screen and (max-width: 1920px) {
@@ -430,7 +434,7 @@
 
         const createItem = ({ body, number, ...rest }) => {
             const [, file = ''] = body.match(/<img [^</>]*src=.*\/([^\/]+\.\w{3,4})/) || [];
-            const [, desc = ''] = body.match(/<mark>(.*)<\/mark>/) || [];
+            const [, desc = ''] = body.match(/<blockquote>(.*)<\/blockquote>/) || [];
             const [, ratio = '1:1'] = body.match(/data-ratio="([\d:]*)"/) || [];
             template.innerHTML = renderIssue({
                 href: `${BASE}/issues/${number}`,

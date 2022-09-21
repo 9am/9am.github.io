@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Tue, 30 Aug 2022 04:51:51 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 21 Sep 2022 09:39:10 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>Seeing SVG Filter</title>
+            <link>https://github.com/9am/9am.github.io/issues/9</link>
+            <description>A visualization tool that helps to understand complicated SVG filter effects.</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Wed, 21 Sep 2022 09:26:27 GMT</pubDate>
+            <guid>I_kwDOFkEW485SSol8</guid>
+            <enclosure url="https://user-images.githubusercontent.com/1435457/191468130-a7a34fdb-77cd-426e-b56d-a1a679038a96.jpeg" />
+        </item>
         <item>
             <title>My Takes on Blogging with GitHub</title>
             <link>https://github.com/9am/9am.github.io/issues/8</link>

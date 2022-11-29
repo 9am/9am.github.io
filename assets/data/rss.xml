@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Wed, 21 Sep 2022 09:39:10 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 29 Nov 2022 08:02:22 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>Every Animation Lover Needs A Control Panel</title>
+            <link>https://github.com/9am/9am.github.io/issues/10</link>
+            <description>A simple ctrl-panel I made for myself.</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Tue, 29 Nov 2022 07:56:35 GMT</pubDate>
+            <guid>I_kwDOFkEW485XegG_</guid>
+            <enclosure url="https://user-images.githubusercontent.com/1435457/204469626-5ac3abae-5157-4a74-8545-2379df320dbd.jpeg" />
+        </item>
         <item>
             <title>Seeing SVG Filter</title>
             <link>https://github.com/9am/9am.github.io/issues/9</link>

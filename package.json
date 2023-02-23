@@ -1,0 +1,19 @@
+{
+  "name": "9am.github.io",
+  "version": "1.0.0",
+  "description": "9am blog",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "9am",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.1.4",
+    "vite-plugin-static-copy": "^0.13.0"
+  },
+  "dependencies": {
+    "@9am/img-victor": "^1.0.1"
+  }
+}

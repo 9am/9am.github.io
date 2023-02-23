@@ -1,4 +1,4 @@
-name: PUBLISH
+name: Publish Articles
 
 on:
   workflow_dispatch:

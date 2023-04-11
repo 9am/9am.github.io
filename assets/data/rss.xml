@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Tue, 29 Nov 2022 08:02:22 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 11 Apr 2023 07:22:58 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>A Flipping Book Magic</title>
+            <link>https://github.com/9am/9am.github.io/issues/11</link>
+            <description>After 12 years, I did it again. But with HTML/CSS/JS!</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Mon, 10 Apr 2023 09:20:38 GMT</pubDate>
+            <guid>I_kwDOFkEW485i-T9n</guid>
+            <enclosure url="https://user-images.githubusercontent.com/1435457/230853123-9dbcfde7-1214-4ef9-bdf8-b7ebab147ec7.svg" />
+        </item>
         <item>
             <title>Every Animation Lover Needs A Control Panel</title>
             <link>https://github.com/9am/9am.github.io/issues/10</link>

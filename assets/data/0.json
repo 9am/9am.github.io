@@ -1,6 +1,26 @@
 {
   "nodes": [
     {
+      "id": "I_kwDOFkEW485i-T9n",
+      "title": "A Flipping Book Magic",
+      "body": "<blockquote>After 12 years, I did it again. But with HTML/CSS/JS!</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/230853123-9dbcfde7-1214-4ef9-bdf8-b7ebab147ec7.svg\" alt=\"flipping-book\" width=\"50%\" />",
+      "publishedAt": "2023-04-10T09:20:38Z",
+      "number": 11,
+      "labels": {
+        "nodes": [
+          {
+            "name": "javascript"
+          },
+          {
+            "name": "css"
+          },
+          {
+            "name": "animation"
+          }
+        ]
+      }
+    },
+    {
       "id": "I_kwDOFkEW485XegG_",
       "title": "Every Animation Lover Needs A Control Panel",
       "body": "<blockquote>A simple ctrl-panel I made for myself.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/204469626-5ac3abae-5157-4a74-8545-2379df320dbd.jpeg\" alt=\"ctrl-panel\" width=\"100%\" data-ratio=\"639:437\" />",
@@ -58,6 +78,9 @@
           },
           {
             "name": "canvas"
+          },
+          {
+            "name": "animation"
           }
         ]
       }
@@ -79,7 +102,7 @@
     {
       "id": "I_kwDOFkEW485J_2Kc",
       "title": "&lt; img-tissue &gt;",
-      "body": "<blockquote>How to make a minimization effect with canvas.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/186380370-e70a8be0-dd18-48d5-8bcf-286ccebf1b9a.svg\" alt=\"triangle\" width=\"100%\" />",
+      "body": "<blockquote>How to make a minimization effect with canvas.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/186380370-e70a8be0-dd18-48d5-8bcf-286ccebf1b9a.svg\" alt=\"triangle\" width=\"50%\" />",
       "publishedAt": "2022-05-19T09:11:29Z",
       "number": 5,
       "labels": {
@@ -92,6 +115,9 @@
           },
           {
             "name": "canvas"
+          },
+          {
+            "name": "animation"
           }
         ]
       }
@@ -116,7 +142,7 @@
     {
       "id": "I_kwDOFkEW485GH59f",
       "title": "&lt; img-victor &gt;",
-      "body": "<blockquote>How to create a web component that draws an image with lines using LSD & web worker.</blockquote><img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/186380186-952569b1-f8f8-4fe4-ab56-d33acf943e4a.svg\" width=\"100%\" />",
+      "body": "<blockquote>How to create a web component that draws an image with lines using LSD & web worker.</blockquote><img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/186380186-952569b1-f8f8-4fe4-ab56-d33acf943e4a.svg\" width=\"50%\" />",
       "publishedAt": "2022-03-22T09:08:47Z",
       "number": 3,
       "labels": {
@@ -132,6 +158,9 @@
           },
           {
             "name": "svg"
+          },
+          {
+            "name": "animation"
           }
         ]
       }
@@ -165,7 +194,7 @@
       }
     }
   ],
-  "totalCount": 10,
+  "totalCount": 11,
   "pageInfo": {
     "hasNextPage": false,
     "nextPage": 1

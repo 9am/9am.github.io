@@ -1,11 +1,13 @@
 name: Deploy Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ['pages']
+  # Run after Publish
+  workflow_run:
+    workflows: [Publish Articles]
+    types:
+      - completed
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Run manually
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages

@@ -1,10 +1,9 @@
 import { register } from '@9am/img-victor';
+import { createItem } from './article.js';
 register({
     worker: () => new Worker(new URL('@9am/img-victor/fastWorker.js', import.meta.url)),
 });
 
-const BASE = 'https://github.com/9am/9am.github.io';
-const IMG_PROXY = 'https://ik.imagekit.io/94av7hg7apo';
 const main = document.querySelector('#main');
 const moreBtn = document.querySelector('#more');
 
@@ -25,47 +24,6 @@ const pending = (status = false) => {
 
 const addItems = (child) => {
     main.insertBefore(child, moreBtn.parentNode);
-};
-
-const template = document.createElement('template');
-const renderIssue = ({
-    href,
-    src,
-    ratio,
-    title,
-    desc,
-    publishedAt,
-    labels,
-    next,
-}) => `
-    <article class="item" data-next="${next}">
-        <a class="button" href="${href}" target="_blank" aria-label="${name}">
-            <img-victor class="victor" data-src="${src}" ratio="${ratio}"></img-victor>
-        </a>
-        <section class="info">
-            <h2 class="title">${title}</h2>
-            <time class="date" datetime="${publishedAt}">${new Date(publishedAt).toDateString()}</time>
-            <p class="desc">${desc}</p>
-            <div class="tags">${renderLabels(labels)}</div>
-        </section>
-    </article>
-`;
-const renderLabels = ({ nodes }) => nodes.map(({ name }) => `
-    <a class="button small" href="${BASE}/labels/${name}" target="_blank" aria-label="${name}">${name}</a>
-`).join('');
-
-const createItem = ({ body, number, ...rest }) => {
-    const [, file = ''] = body.match(/<img [^</>]*src=.*\/([^\/]+\.\w{3,4})/) || [];
-    const [, desc = ''] = body.match(/<blockquote>(.*)<\/blockquote>/) || [];
-    const [, ratio = '1:1'] = body.match(/data-ratio="([\d:]*)"/) || [];
-    template.innerHTML = renderIssue({
-        href: `${BASE}/issues/${number}`,
-        src: `${IMG_PROXY}/${file}`,
-        ratio,
-        desc,
-        ...rest,
-    });
-    return template.content.cloneNode(true);
 };
 
 const loadMore = async () => {
@@ -110,15 +68,10 @@ const generateGradient = () => {
     gradient.style.setProperty('--stop-2', `${+hue - 60}deg`);
 };
 
-(async () => {
+(() => {
     moreBtn.addEventListener('click', loadMore);
     try {
         generateTile();
         generateGradient();
     } catch (err) {};
-    try {
-        await loadMore();
-    } catch (err) {
-        console.log('fail:', err);
-    }
 })();

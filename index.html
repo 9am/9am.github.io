@@ -30,8 +30,9 @@
         <h1 class="logo">9am</h1>
     </header>
     <main id="main">
+        {{defaultArticles}}
         <article class="item">
-            <button id="more" class="button">......</button>
+            <button id="more" class="button" {{more.disabled}}>{{more.text}}</button>
             <section class="info"></section>
         </article>
     </main>

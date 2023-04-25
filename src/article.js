@@ -29,7 +29,7 @@ const renderIssue = ({
     id,
     href,
     src,
-    ratio,
+    ratio = '1:1',
     title,
     desc,
     publishedAt,
@@ -37,15 +37,14 @@ const renderIssue = ({
     next,
 }) => `
     <article class="item" id="${id}" data-next="${next}">
-        <a class="button" href="${href}" target="_blank" aria-label="${title}">
+        <a class="button" href="${href}" target="_blank" aria-label="${title}" style="aspect-ratio: ${ratio.split(':').join('/')}">
             <img-victor class="victor" data-src="${src}" ratio="${ratio}"></img-victor>
         </a>
         <section class="info">
             <h2 class="title">${title}</h2>
             <time class="date" datetime="${publishedAt}">${new Date(publishedAt).toDateString()}</time>
             <p class="desc">${desc}</p>
-            <div class="tags">${renderLabels(labels)}
-            </div>
+            <div class="tags">${renderLabels(labels)}</div>
         </section>
     </article>`;
 

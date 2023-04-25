@@ -79,8 +79,10 @@ footer {
     border: var(--border-ele);
     box-shadow: var(--shadow-ele-t), var(--shadow-ele-b);
 }
+img-victor {
+    clip-path: inset(0 round var(--s-1));
+}
 .button {
-    padding: 2px;
     text-decoration: none;
     cursor: pointer;
     border-radius: var(--s-1);

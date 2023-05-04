@@ -42,6 +42,7 @@ footer {
     margin-top: auto;
 }
 .logo-svg {
+    pointer-events: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -208,6 +209,9 @@ footer .button-group{
 @media screen and (max-width: 1920px) {
     .item {
         flex: 0 0 25%;
+    }
+    .item > .button {
+        width: 100%;
     }
 }
 @media screen and (max-width: 1280px) {

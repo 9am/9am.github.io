@@ -59,6 +59,15 @@ const generateTile = () => {
             'feComponentTransfer[in=light] *',
         )].forEach(node => node.setAttribute('slope', 2));
     }
+    // hover animation for tile
+    const tiles = document.querySelectorAll('.tile');
+    const light = contour.querySelector('feDistantLight');
+    const trans = contour.querySelector('feFuncA');
+    const { width, height } = tiles[0].getBoundingClientRect();
+    const tileMoveHandler = getTileMoveHandler({ light, trans, mx: width / 2, my: height / 2 });
+    Array.from(tiles).forEach((tile) => {
+        tile.addEventListener('mousemove', tileMoveHandler);
+    });
 };
 
 const generateGradient = () => {
@@ -67,6 +76,30 @@ const generateGradient = () => {
     gradient.style.setProperty('--stop-1', `${+hue}deg`);
     gradient.style.setProperty('--stop-2', `${+hue - 60}deg`);
 };
+
+const throttle = (fn, delay = 50) => {
+    let tid = null;
+    return (...args) => {
+        if (tid) {
+            return;
+        }
+        tid = setTimeout(() => {
+            fn.apply(this, args);
+            clearTimeout(tid);
+            tid = null;
+        }, delay);
+    };
+};
+
+const getTileMoveHandler = ({ light, trans, mx, my }) => throttle((evt) => {
+    const ox = evt.offsetX - mx;
+    const oy = evt.offsetY - my;
+    const angle = Math.floor(Math.atan2(oy, ox) * 180 / Math.PI + 180);
+    const dist = Math.hypot(oy, ox);
+    const scale = 0.1 + (dist / mx) * 0.3;
+    light.setAttribute('azimuth', angle);
+    trans.setAttribute('amplitude', scale);
+});
 
 (() => {
     moreBtn.addEventListener('click', loadMore);

@@ -1,0 +1,186 @@
+body {
+    display: grid;
+    place-content: center;
+}
+footer {
+    width: 50vw;
+    min-width: 200px;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 500ms linear 800ms;
+    animation: 500ms linear 800ms both trans-3d;
+    & * {
+        transition: transform, background, width, height 500ms;
+    }
+    & h2 {
+        position: absolute;
+        top: 16px;;
+        right: 16px;;
+    }
+    & .tile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    & .clock {
+        transition: transform 500ms;
+        transition-delay: 1s;
+        transform: translate3d(0, 0, 120px);
+        animation: 6s linear 4s infinite clock-move;
+    }
+}
+
+
+.clock {
+    --size: 100px;
+    --thickness: 20px;
+    --surface-num: 20;
+    --surface-size: calc(var(--size) * 3.1415926 / var(--surface-num));
+    --case-color: hsl(0.2turn 60% 45% / .2);
+    --hand-color: hsl(0.2turn 60% 45% / .4);
+    --stroke-color: hsl(0.2turn 60% 45% / .6);
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition: transform 500ms;
+    /*
+    transform: perspective(1000px) translate3d(0, 0, -200px) rotate3d(1, -1, 1, 45deg);
+    */
+    & * {
+        transform-origin: center;
+        transform-style: preserve-3d;
+    }
+}
+
+.case, .dail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.case {
+    &::before, &::after {
+        content: '9am';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: var(--size);
+        border-radius: 50%;
+        border: 1px solid var(--stroke-color);
+        background: var(--case-color);
+    }
+    &::before {
+        transform: translate3d(0, 0, calc(var(--thickness) / 2));
+    }
+    &::after {
+        transform: translate3d(0, 0, calc(var(--thickness) / -2));
+    }
+    & li {
+        --rotation: 0deg;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--thickness);
+        height: var(--surface-size);
+        transform: translate3d(-50%, -50%, 0) rotateY(90deg) rotateX(var(--rotation)) translateZ(calc(var(--size) / 2));
+        border: 1px solid var(--stroke-color);
+        background: var(--case-color);
+        /*
+        animation: 10s linear infinite alternate case-move;
+        */
+    }
+}
+
+
+
+.dail {
+    transform: rotateZ(-90deg);
+    & li {
+        --rotation: 0deg;
+        background: var(--hand-color);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(var(--size) / 2.5);
+        height: calc(var(--thickness) / 2);
+        min-height: 5px;
+        border-radius: 5px;
+        transform-origin: left 50%;
+        transform: translateY(-50%) rotateZ(var(--rotation));
+    }
+    & .hour {
+        --rotation: -90deg;
+        animation: 6s linear 2s infinite hour-move;
+    }
+    & .minute {
+        --rotation: 0deg;
+        animation: 1s linear 2s infinite minute-move;
+    }
+}
+
+.hour,
+.minute {
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background: var(--hand-color);
+    }
+    &::before {
+        transform: rotateX(60deg);
+    }
+    &::after {
+        transform: rotateX(-60deg);
+    }
+}
+
+@keyframes trans-3d {
+    from {
+        transform: unset;
+    }
+    to {
+        transform: perspective(1000px) translate3d(0, 0, 200px) rotate3d(1, -1, 1, 65deg);
+    }
+}
+@keyframes clock-move {
+    from {
+        transform: translate3d(0, 0, 120px) rotate3d(1, -1, 1, 0deg);
+    }
+    to {
+        transform: translate3d(0, 0, 120px) rotate3d(1, -1, 1, 360deg);
+    }
+}
+@keyframes hour-move {
+    from {
+        transform: translateY(-50%) rotateZ(-90deg);
+    }
+    to {
+        transform: translateY(-50%) rotateZ(270deg);
+    }
+}
+@keyframes minute-move {
+    from {
+        transform: translateY(-50%) rotateZ(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotateZ(360deg);
+    }
+}

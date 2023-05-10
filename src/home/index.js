@@ -53,12 +53,6 @@ const generateTile = () => {
         'seed',
         Math.floor(Math.random() * 1000),
     );
-    // adjust light for firefox
-    if (Boolean(~navigator.userAgent.indexOf("Firefox"))) {
-        [...contour.querySelectorAll(
-            'feComponentTransfer[in=light] *',
-        )].forEach(node => node.setAttribute('slope', 2));
-    }
     // hover animation for tile
     const tiles = document.querySelectorAll('.tile');
     const light = contour.querySelector('feDistantLight');

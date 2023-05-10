@@ -1,0 +1,61 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    padding: var(--s-3);
+}
+.item > .button {
+    flex: 2 0;
+}
+.item > .info {
+    flex: 1 1;
+    margin: var(--s-1) 0 0 0;
+    position: relative;
+}
+.item .victor {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    clip-path: inset(0 round var(--s-1));
+    --victor-stroke: var(--color-normal);
+}
+.info .title {
+    font-weight: normal;
+}
+.info .desc {
+    line-height: 1.2em;
+    color: var(--color-normal);
+}
+.info .date {
+    font-size: small;
+    color: #999;
+    line-height: 3em;
+}
+.info .tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px 0;
+}
+.tags .button {
+    margin: var(--s-1) var(--s-1) 0 0;
+}
+.info .tags:empty,
+.info .desc:empty {
+    display: none;
+}
+.info::after {
+    --shadow-ele-t: 1px 1px 2px rgb(217, 210, 200, 0.52);
+    --shadow-ele-b: -1px -1px 2px rgb(255, 255, 255, 0.84);
+    position: absolute;
+    bottom: calc(var(--s-3) * -1);
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    content: '';
+    background-color: var(--color-bg);
+    box-shadow: inset var(--shadow-ele-t), inset var(--shadow-ele-b);
+}
+.item:last-child .info::after {
+    visibility: hidden;
+}

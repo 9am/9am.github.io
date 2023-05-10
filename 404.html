@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> meta }}
+    <title>9am Blog 404</title>
+    <style>
+        @import url('./src/resource/css/common.css');
+        @import url('./src/404/index.css');
+        @import url('./src/resource/css/media.css');
+    </style>
+</head>
+<body>
+    <footer class="elevation">
+        <section class="clock">
+            <ul class="case"></ul>
+            <ol class="dail">
+                <li class="hour"></li>
+                <li class="minute"></li>
+            </ol>
+        </section>
+        <h2><a href="/">Back Home</a></h2>
+        <h1>404</h1>
+        <p><strong>Page not found</strong></p>
+        {{> footer }}
+    </footer>
+    {{> filter }}
+    <script type="module" src="./src/404/index.js"></script>
+</body>
+</html>

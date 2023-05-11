@@ -1,16 +1,17 @@
 .item {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 0 0 20%;
-    padding: var(--s-3);
+    padding-bottom: calc(var(--s-3) * 2);
 }
 .item > .button {
     flex: 2 0;
+    width: 100%;
 }
 .item > .info {
     flex: 1 1;
     margin: var(--s-1) 0 0 0;
-    position: relative;
 }
 .item .victor {
     height: 100%;
@@ -43,11 +44,11 @@
 .info .desc:empty {
     display: none;
 }
-.info::after {
+.item::after {
     --shadow-ele-t: 1px 1px 2px rgb(217, 210, 200, 0.52);
     --shadow-ele-b: -1px -1px 2px rgb(255, 255, 255, 0.84);
     position: absolute;
-    bottom: calc(var(--s-3) * -1);
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 4px;
@@ -56,6 +57,6 @@
     background-color: var(--color-bg);
     box-shadow: inset var(--shadow-ele-t), inset var(--shadow-ele-b);
 }
-.item:last-child .info::after {
+.item:last-child::after {
     visibility: hidden;
 }

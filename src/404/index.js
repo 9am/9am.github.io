@@ -1,4 +1,4 @@
-const num = 20;
+const num = 24;
 const clock = document.querySelector('.clock');
 clock.style.setProperty('--surface-num', num);
 const cCase = clock.querySelector('.case');

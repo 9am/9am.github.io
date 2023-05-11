@@ -16,6 +16,7 @@
     --banner-size: 120px;
     --stop-1: dimgrey;
     --stop-2: dimgrey;
+    --article-min-width: 250px;
 }
 body {
     display: flex;
@@ -34,8 +35,12 @@ header, footer {
 }
 main {
     flex: 1 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--article-min-width), 1fr));
+    gap: calc(var(--s-3) * 2);
+    padding: calc(var(--s-3) * 2);
+    align-self: center;
+    width: min(1512px, 100%);
 }
 header .tile {
     position: relative;
@@ -43,6 +48,9 @@ header .tile {
 }
 footer {
     margin-top: auto;
+}
+.tile {
+    fill: var(--color-bg);
 }
 .logo-svg {
     pointer-events: none;
@@ -109,7 +117,7 @@ footer {
     border-radius: 4px;
 }
 .button.medium {
-    padding: var(--s-1) var(--s-1);
+    padding: var(--s-1);
     font-size: medium;
 }
 .icon {

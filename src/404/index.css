@@ -8,14 +8,12 @@ footer {
     max-width: 600px;
     height: auto;
     margin: 0 auto;
+    padding-top: 50px;
     padding-bottom: 80px;
     text-align: center;
     transform-style: preserve-3d;
     transition: transform 500ms linear 800ms;
     animation: 500ms linear 800ms both trans-3d;
-    & * {
-        transition: transform, background, width, height 500ms;
-    }
     & h2 {
         position: absolute;
         top: 16px;;
@@ -29,35 +27,35 @@ footer {
         height: 100%;
         z-index: -1;
     }
-    & .clock {
-        transition: transform 500ms;
-        transition-delay: 1s;
-        transform: translate3d(0, 0, 120px);
-        animation: 6s linear 4s infinite clock-move;
-    }
 }
 
 
 .clock {
     --size: 100px;
     --thickness: 20px;
-    --surface-num: 20;
+    --surface-num: 24;
     --surface-size: calc(var(--size) * 3.1415926 / var(--surface-num));
     --case-color: hsl(0.2turn 60% 45% / .2);
     --hand-color: hsl(0.2turn 60% 45% / .4);
     --stroke-color: hsl(0.2turn 60% 45% / .6);
+    --stroke-width: 1px;
     position: relative;
     width: var(--size);
     height: var(--size);
     margin: 0 auto;
+    transition-delay: 1s;
     transform-style: preserve-3d;
-    transition: transform 500ms;
-    /*
-    transform: perspective(1000px) translate3d(0, 0, -200px) rotate3d(1, -1, 1, 45deg);
-    */
+    transform: translate3d(0, 0, 120px);
+    animation: 6s linear 4s infinite clock-move;
     & * {
         transform-origin: center;
         transform-style: preserve-3d;
+        transition-property: transform, background, border, width, height;
+        transition-duration:  500ms;
+        &::before, &::after {
+            transition-property: transform, background, border, width, height;
+            transition-duration:  500ms;
+        }
     }
 }
 
@@ -71,7 +69,7 @@ footer {
 
 .case {
     &::before, &::after {
-        content: '9am';
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -79,7 +77,7 @@ footer {
         height: 100%;
         line-height: var(--size);
         border-radius: 50%;
-        border: 1px solid var(--stroke-color);
+        border: var(--stroke-width) solid var(--stroke-color);
         background: var(--case-color);
     }
     &::before {
@@ -96,7 +94,7 @@ footer {
         width: var(--thickness);
         height: var(--surface-size);
         transform: translate3d(-50%, -50%, 0) rotateY(90deg) rotateX(var(--rotation)) translateZ(calc(var(--size) / 2));
-        border: 1px solid var(--stroke-color);
+        border: var(--stroke-width) solid var(--stroke-color);
         background: var(--case-color);
         /*
         animation: 10s linear infinite alternate case-move;
@@ -163,9 +161,13 @@ footer {
 @keyframes clock-move {
     from {
         transform: translate3d(0, 0, 120px) rotate3d(1, -1, 1, 0deg);
+        --stroke-width: 1px;
+        --thickness: 0;
     }
     to {
         transform: translate3d(0, 0, 120px) rotate3d(1, -1, 1, 360deg);
+        --stroke-width: 7px;
+        --thickness: 20px;
     }
 }
 @keyframes hour-move {

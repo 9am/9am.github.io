@@ -1,6 +1,20 @@
 {
   "nodes": [
     {
+      "id": "I_kwDOFkEW485p3IUg",
+      "title": "If Chinese Characters(漢字) Are Curried Functions...",
+      "body": "<blockquote>Find out interesting possibilities about thinking Chinese characters the programmatic way.</blockquote><img src=\"https://ik.imagekit.io/94av7hg7apo/blog/c1__hS-87Xze.webp?updatedAt=1687851146630\" alt=\"chinese-character\" width=\"50%\" />",
+      "publishedAt": "2023-06-27T04:14:23Z",
+      "number": 12,
+      "labels": {
+        "nodes": [
+          {
+            "name": "musing"
+          }
+        ]
+      }
+    },
+    {
       "id": "I_kwDOFkEW485i-T9n",
       "title": "A Flipping Book Magic",
       "body": "<blockquote>After 12 years, I did it again. But with HTML/CSS/JS!</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/236132696-7395c797-976b-4171-b3c4-ae1b059df26c.svg\" alt=\"flipping-book\" width=\"50%\" />",
@@ -194,7 +208,7 @@
       }
     }
   ],
-  "totalCount": 11,
+  "totalCount": 12,
   "pageInfo": {
     "hasNextPage": false,
     "nextPage": 1

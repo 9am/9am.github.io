@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Thu, 13 Jul 2023 03:30:20 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 15 Aug 2023 09:03:41 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>CMYK Halftone</title>
+            <link>https://github.com/9am/9am.github.io/issues/14</link>
+            <description>Explore the painting art of dots and 4 colors.</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Tue, 15 Aug 2023 08:57:59 GMT</pubDate>
+            <guid>I_kwDOFkEW485uVcIE</guid>
+            <enclosure url="" />
+        </item>
         <item>
             <title>macOS Monterey Screensaver with CSS</title>
             <link>https://github.com/9am/9am.github.io/issues/13</link>

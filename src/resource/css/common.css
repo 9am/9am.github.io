@@ -146,5 +146,11 @@ footer .button-group {
 .button-group em {
     display: none;
 }
+footer .hits {
+    position: absolute;
+    top: var(--s-3);
+    right: var(--s-3);
+    width: 0;
+}
 .stop1 { stop-color: hwb(var(--stop-1) 40% 50%); }
 .stop2 { stop-color: hwb(var(--stop-2) 40% 50%); }

@@ -54,8 +54,8 @@ const renderLabels = ({ nodes }) =>
     ).join('');
 
 export const createItem = ({ body, number, ...rest }) => {
-    const [, file = ''] = body.match(/<img [^</>]*src=".*\/([^/"]+)"/) || [];
-    const [, src = ''] = body.match(/<img [^</>]*src="(.*)"/) || [];
+    const [, file = ''] = body.match(/<img [^</>]*src="[^"]*\/([^/"]+)"/) || [];
+    const [, src = ''] = body.match(/<img [^</>]*src="([^"]*)"/) || [];
     const [, desc = ''] = body.match(/<blockquote>(.*)<\/blockquote>/) || [];
     const [, ratio = '1:1'] = body.match(/data-ratio="([\d:]*)"/) || [];
     const needProxy = /github/.test(src);

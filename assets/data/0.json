@@ -1,9 +1,29 @@
 {
   "nodes": [
     {
+      "id": "I_kwDOFkEW485xgEB2",
+      "title": "Dynamic hits counter with Deno",
+      "body": "<blockquote>How to build a dynamic image API that works as a hits counter powered by Deno Deploy and Deno KV</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/7539aa6a-5230-4ba6-8a20-b42058ce7393\" alt=\"deno\" width=\"50%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/15\" alt=\"hits\" width=\"150px\" />",
+      "publishedAt": "2023-09-20T06:13:50Z",
+      "number": 15,
+      "labels": {
+        "nodes": [
+          {
+            "name": "deno"
+          },
+          {
+            "name": "api"
+          },
+          {
+            "name": "server"
+          }
+        ]
+      }
+    },
+    {
       "id": "I_kwDOFkEW485uVcIE",
       "title": "CMYK Halftone - The Art of Downsampling",
-      "body": "<blockquote>Explore the painting art of dots and 4 colors.</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/ca30e6c2-b79f-4225-8edb-306d84b4c299\" alt=\"halftone-char\" width=\"50%\" />",
+      "body": "<blockquote>Explore the painting art of dots and 4 colors.</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/ca30e6c2-b79f-4225-8edb-306d84b4c299\" alt=\"halftone-char\" width=\"50%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/14\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2023-08-15T08:57:59Z",
       "number": 14,
       "labels": {
@@ -26,7 +46,7 @@
     {
       "id": "I_kwDOFkEW485rUnXh",
       "title": "macOS Monterey Screensaver with CSS",
-      "body": "<blockquote>Try to build the simple but fantastic macOS screensaver with CSS perspective, clip-path, and gradient.</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/3af6f4ef-2af1-4a24-a9c6-01d919e5195e\" alt=\"monterey\" width=\"50%\" />",
+      "body": "<blockquote>Try to build the simple but fantastic macOS screensaver with CSS perspective, clip-path, and gradient.</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/3af6f4ef-2af1-4a24-a9c6-01d919e5195e\" alt=\"monterey\" width=\"50%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/13\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2023-07-12T09:28:49Z",
       "number": 13,
       "labels": {
@@ -43,7 +63,7 @@
     {
       "id": "I_kwDOFkEW485p3IUg",
       "title": "If Chinese Characters(漢字) Are Curried Functions...",
-      "body": "<blockquote>Find out interesting possibilities about thinking Chinese characters the programmatic way.</blockquote><img src=\"https://ik.imagekit.io/94av7hg7apo/blog/c1__hS-87Xze.webp?updatedAt=1687851146630\" alt=\"chinese-character\" width=\"50%\" data-ratio=\"40:29\" />",
+      "body": "<blockquote>Find out interesting possibilities about thinking Chinese characters the programmatic way.</blockquote><img src=\"https://ik.imagekit.io/94av7hg7apo/blog/c1__hS-87Xze.webp?updatedAt=1687851146630\" alt=\"chinese-character\" width=\"50%\" data-ratio=\"40:29\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/12\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2023-06-27T04:14:23Z",
       "number": 12,
       "labels": {
@@ -57,7 +77,7 @@
     {
       "id": "I_kwDOFkEW485i-T9n",
       "title": "A Flipping Book Magic",
-      "body": "<blockquote>After 12 years, I did it again. But with HTML/CSS/JS!</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/236132696-7395c797-976b-4171-b3c4-ae1b059df26c.svg\" alt=\"flipping-book\" width=\"50%\" />",
+      "body": "<blockquote>After 12 years, I did it again. But with HTML/CSS/JS!</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/236132696-7395c797-976b-4171-b3c4-ae1b059df26c.svg\" alt=\"flipping-book\" width=\"50%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/11\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2023-04-10T09:20:38Z",
       "number": 11,
       "labels": {
@@ -77,7 +97,7 @@
     {
       "id": "I_kwDOFkEW485XegG_",
       "title": "Every Animation Lover Needs A Control Panel",
-      "body": "<blockquote>A simple ctrl-panel I made for myself.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/204469626-5ac3abae-5157-4a74-8545-2379df320dbd.jpeg\" alt=\"ctrl-panel\" width=\"100%\" data-ratio=\"639:437\" />",
+      "body": "<blockquote>A simple ctrl-panel I made for myself.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/204469626-5ac3abae-5157-4a74-8545-2379df320dbd.jpeg\" alt=\"ctrl-panel\" width=\"50%\" data-ratio=\"639:437\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/10\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-11-29T07:56:35Z",
       "number": 10,
       "labels": {
@@ -94,7 +114,7 @@
     {
       "id": "I_kwDOFkEW485SSol8",
       "title": "Seeing SVG Filter",
-      "body": "<blockquote>A visualization tool that helps to understand complicated SVG filter effects.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/191468130-a7a34fdb-77cd-426e-b56d-a1a679038a96.jpeg\" alt=\"pedal\" width=\"100%\" data-ratio=\"640:427\" />",
+      "body": "<blockquote>A visualization tool that helps to understand complicated SVG filter effects.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/191468130-a7a34fdb-77cd-426e-b56d-a1a679038a96.jpeg\" alt=\"pedal\" width=\"50%\" data-ratio=\"640:427\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/9\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-09-21T09:26:27Z",
       "number": 9,
       "labels": {
@@ -108,7 +128,7 @@
     {
       "id": "I_kwDOFkEW485QtH9b",
       "title": "My Takes on Blogging with GitHub",
-      "body": "<blockquote>Is it possible to host a tech blog with GitHub only?</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/187337085-4bd72ed9-0e70-4874-b3a1-c694ddbd9764.jpeg\" alt=\"keyboard\" width=\"100%\" data-ratio=\"640:427\" />",
+      "body": "<blockquote>Is it possible to host a tech blog with GitHub only?</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/187337085-4bd72ed9-0e70-4874-b3a1-c694ddbd9764.jpeg\" alt=\"keyboard\" width=\"50%\" data-ratio=\"640:427\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/8\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-08-29T09:50:34Z",
       "number": 8,
       "labels": {
@@ -122,7 +142,7 @@
     {
       "id": "I_kwDOFkEW485Ot52w",
       "title": "Light a &#39;Fire&#39; with Canvas and Particles.",
-      "body": "<blockquote>A simple way to draw a dynamic fire flame on the page.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/181480584-8b3635ce-f06f-4e67-a9dd-14135a0d1939.jpeg\" alt=\"tools\" width=\"50%\" data-ratio=\"640:853\" />",
+      "body": "<blockquote>A simple way to draw a dynamic fire flame on the page.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/181480584-8b3635ce-f06f-4e67-a9dd-14135a0d1939.jpeg\" alt=\"tools\" width=\"50%\" data-ratio=\"640:853\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/7\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-07-28T09:31:15Z",
       "number": 7,
       "labels": {
@@ -142,7 +162,7 @@
     {
       "id": "I_kwDOFkEW485LogdZ",
       "title": "Call APIs Before It Existed? Sure!",
-      "body": "<blockquote></blockquote><img src=\"https://user-images.githubusercontent.com/1435457/173283474-fc89df74-c959-47d3-a094-5da58dc7f0b2.jpeg\" alt=\"tools\" width=\"100%\" data-ratio=\"4:3\" />",
+      "body": "<blockquote></blockquote><img src=\"https://user-images.githubusercontent.com/1435457/173283474-fc89df74-c959-47d3-a094-5da58dc7f0b2.jpeg\" alt=\"tools\" width=\"50%\" data-ratio=\"4:3\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/6\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-06-13T05:07:04Z",
       "number": 6,
       "labels": {
@@ -156,7 +176,7 @@
     {
       "id": "I_kwDOFkEW485J_2Kc",
       "title": "&lt; img-tissue &gt;",
-      "body": "<blockquote>How to make a minimization effect with canvas.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/186380370-e70a8be0-dd18-48d5-8bcf-286ccebf1b9a.svg\" alt=\"triangle\" width=\"50%\" />",
+      "body": "<blockquote>How to make a minimization effect with canvas.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/186380370-e70a8be0-dd18-48d5-8bcf-286ccebf1b9a.svg\" alt=\"triangle\" width=\"50%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/5\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-05-19T09:11:29Z",
       "number": 5,
       "labels": {
@@ -179,7 +199,7 @@
     {
       "id": "I_kwDOFkEW485IAp1G",
       "title": "Headline Hopps",
-      "body": "<blockquote>Using 50 lines of plain javascript to build a browser add-on to show all the headlines on a page and navigate between them.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/164585073-ff55d56d-aba3-4e2b-87f2-00c3268edcbc.jpeg\" alt=\"headline-hopps\" width=\"100%\" data-ratio=\"88:67\" />",
+      "body": "<blockquote>Using 50 lines of plain javascript to build a browser add-on to show all the headlines on a page and navigate between them.</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/164585073-ff55d56d-aba3-4e2b-87f2-00c3268edcbc.jpeg\" alt=\"headline-hopps\" width=\"50%\" data-ratio=\"88:67\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/4\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-04-19T10:12:46Z",
       "number": 4,
       "labels": {
@@ -196,7 +216,7 @@
     {
       "id": "I_kwDOFkEW485GH59f",
       "title": "&lt; img-victor &gt;",
-      "body": "<blockquote>How to create a web component that draws an image with lines using LSD & web worker.</blockquote><img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/186380186-952569b1-f8f8-4fe4-ab56-d33acf943e4a.svg\" width=\"50%\" />",
+      "body": "<blockquote>How to create a web component that draws an image with lines using LSD & web worker.</blockquote><img alt=\"old-senbazuru\" src=\"https://user-images.githubusercontent.com/1435457/186380186-952569b1-f8f8-4fe4-ab56-d33acf943e4a.svg\" width=\"50%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/3\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-03-22T09:08:47Z",
       "number": 3,
       "labels": {
@@ -220,23 +240,9 @@
       }
     },
     {
-      "id": "I_kwDOFkEW485E8HkL",
-      "title": "Pray for The Sunflowers",
-      "body": "<blockquote>No War Please</blockquote><img src=\"https://user-images.githubusercontent.com/1435457/158135033-b76eb4b1-ee23-4b86-8951-a62f03f2b3f2.jpeg\" alt=\"sunflower\" width=\"100%\"  data-ratio=\"100:105\" />",
-      "publishedAt": "2022-03-02T07:04:01Z",
-      "number": 2,
-      "labels": {
-        "nodes": [
-          {
-            "name": "musing"
-          }
-        ]
-      }
-    },
-    {
       "id": "I_kwDOFkEW485C2aJn",
       "title": "9am Blog",
-      "body": "<blockquote></blockquote><img src=\"https://user-images.githubusercontent.com/1435457/159673139-f955d377-8868-4265-b40a-b9a22c73cf90.jpeg\" alt=\"9am\" width=\"100%\" />",
+      "body": "<blockquote></blockquote><img src=\"https://user-images.githubusercontent.com/1435457/159673139-f955d377-8868-4265-b40a-b9a22c73cf90.jpeg\" alt=\"9am\" width=\"100%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/1\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2022-02-02T06:26:19Z",
       "number": 1,
       "labels": {

@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Wed, 16 Aug 2023 02:16:18 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 20 Sep 2023 06:55:23 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>Dynamic hits counter with Deno</title>
+            <link>https://github.com/9am/9am.github.io/issues/15</link>
+            <description>How to build a dynamic image API that works as a hits counter powered by Deno Deploy and Deno KV</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Wed, 20 Sep 2023 06:13:50 GMT</pubDate>
+            <guid>I_kwDOFkEW485xgEB2</guid>
+            <enclosure url="https://github.com/9am/9am.github.io/assets/1435457/7539aa6a-5230-4ba6-8a20-b42058ce7393" />
+        </item>
         <item>
             <title>CMYK Halftone - The Art of Downsampling</title>
             <link>https://github.com/9am/9am.github.io/issues/14</link>
@@ -119,15 +128,6 @@
             <pubDate>Tue, 22 Mar 2022 09:08:47 GMT</pubDate>
             <guid>I_kwDOFkEW485GH59f</guid>
             <enclosure url="https://user-images.githubusercontent.com/1435457/186380186-952569b1-f8f8-4fe4-ab56-d33acf943e4a.svg" />
-        </item>
-        <item>
-            <title>Pray for The Sunflowers</title>
-            <link>https://github.com/9am/9am.github.io/issues/2</link>
-            <description>No War Please</description>
-            <author>tech.9am@gmail.com</author>
-            <pubDate>Wed, 02 Mar 2022 07:04:01 GMT</pubDate>
-            <guid>I_kwDOFkEW485E8HkL</guid>
-            <enclosure url="https://user-images.githubusercontent.com/1435457/158135033-b76eb4b1-ee23-4b86-8951-a62f03f2b3f2.jpeg" />
         </item>
         <item>
             <title>9am Blog</title>

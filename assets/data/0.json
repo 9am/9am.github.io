@@ -3,7 +3,7 @@
     {
       "id": "I_kwDOFkEW485xgEB2",
       "title": "Dynamic hits counter with Deno",
-      "body": "<blockquote>How to build a dynamic image API that works as a hits counter powered by Deno Deploy and Deno KV</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/7539aa6a-5230-4ba6-8a20-b42058ce7393\" alt=\"deno\" width=\"50%\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/15\" alt=\"hits\" width=\"150px\" />",
+      "body": "<blockquote>How to build a dynamic image API that works as a hits counter powered by Deno Deploy and Deno KV</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/6c5268f4-88b7-4fd7-93d6-7e4e9e1edb51\" alt=\"metronome\" width=\"50%\" data-ratio=\"97:30\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/15\" alt=\"hits\" width=\"150px\" />",
       "publishedAt": "2023-09-20T06:13:50Z",
       "number": 15,
       "labels": {

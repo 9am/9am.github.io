@@ -1,6 +1,20 @@
 {
   "nodes": [
     {
+      "id": "I_kwDOFkEW4852_poo",
+      "title": "A Pure CSS &#39;mousemove&#39; Detector with :has()",
+      "body": "<blockquote></blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/4e241b65-27f9-45d2-a63a-aa00f99eeeca\" alt=\"sensor\" width=\"50%\" data-ratio=\"1259:833\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/17\" alt=\"hits\" width=\"150px\" />",
+      "publishedAt": "2023-11-16T09:08:15Z",
+      "number": 17,
+      "labels": {
+        "nodes": [
+          {
+            "name": "css"
+          }
+        ]
+      }
+    },
+    {
       "id": "I_kwDOFkEW48504lXe",
       "title": "Twist The Reality with feDisplacementMap",
       "body": "<blockquote></blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/e644cecb-8068-4c40-a24c-9cace99f5d0c\" alt=\"joy\" width=\"50%\" data-ratio=\"28:19\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/16\" alt=\"hits\" width=\"150px\" />",
@@ -271,7 +285,7 @@
       }
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "pageInfo": {
     "hasNextPage": false,
     "nextPage": 1

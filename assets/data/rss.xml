@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Wed, 25 Oct 2023 10:04:25 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Nov 2023 04:02:59 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>A Pure CSS &#39;mousemove&#39; Detector with :has()</title>
+            <link>https://github.com/9am/9am.github.io/issues/17</link>
+            <description></description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Thu, 16 Nov 2023 09:08:15 GMT</pubDate>
+            <guid>I_kwDOFkEW4852_poo</guid>
+            <enclosure url="https://github.com/9am/9am.github.io/assets/1435457/4e241b65-27f9-45d2-a63a-aa00f99eeeca" />
+        </item>
         <item>
             <title>Twist The Reality with feDisplacementMap</title>
             <link>https://github.com/9am/9am.github.io/issues/16</link>

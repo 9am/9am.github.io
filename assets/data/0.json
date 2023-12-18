@@ -1,6 +1,26 @@
 {
   "nodes": [
     {
+      "id": "I_kwDOFkEW4855wzts",
+      "title": "Transition on an active highlight - it&#39;s not as simple as it seems",
+      "body": "<blockquote>After fixing a bug, I found that to achieve this on the web takes more effort than I expected. However, the new view transition API offers a straightforward solution.</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/8bc5f971-4bf2-42a3-8e37-45b2788fa691\" alt=\"spotlight\" width=\"50%\" data-ratio=\"640:427\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/18\" alt=\"hits\" width=\"150px\" />",
+      "publishedAt": "2023-12-15T03:41:14Z",
+      "number": 18,
+      "labels": {
+        "nodes": [
+          {
+            "name": "javascript"
+          },
+          {
+            "name": "css"
+          },
+          {
+            "name": "animation"
+          }
+        ]
+      }
+    },
+    {
       "id": "I_kwDOFkEW4852_poo",
       "title": "A Pure CSS &#39;mousemove&#39; Detector with :has()",
       "body": "<blockquote>Build a mousemove event listener with just CSS.</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/4e241b65-27f9-45d2-a63a-aa00f99eeeca\" alt=\"sensor\" width=\"50%\" data-ratio=\"1259:833\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/17\" alt=\"hits\" width=\"150px\" />",
@@ -10,6 +30,9 @@
         "nodes": [
           {
             "name": "css"
+          },
+          {
+            "name": "animation"
           }
         ]
       }
@@ -285,7 +308,7 @@
       }
     }
   ],
-  "totalCount": 16,
+  "totalCount": 17,
   "pageInfo": {
     "hasNextPage": false,
     "nextPage": 1

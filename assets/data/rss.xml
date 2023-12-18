@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Fri, 17 Nov 2023 04:08:12 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 18 Dec 2023 02:23:22 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>Transition on an active highlight - it&#39;s not as simple as it seems</title>
+            <link>https://github.com/9am/9am.github.io/issues/18</link>
+            <description>After fixing a bug, I found that to achieve this on the web takes more effort than I expected. However, the new view transition API offers a straightforward solution.</description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Fri, 15 Dec 2023 03:41:14 GMT</pubDate>
+            <guid>I_kwDOFkEW4855wzts</guid>
+            <enclosure url="https://github.com/9am/9am.github.io/assets/1435457/8bc5f971-4bf2-42a3-8e37-45b2788fa691" />
+        </item>
         <item>
             <title>A Pure CSS &#39;mousemove&#39; Detector with :has()</title>
             <link>https://github.com/9am/9am.github.io/issues/17</link>

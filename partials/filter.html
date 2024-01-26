@@ -39,3 +39,96 @@
         </filter>
     </defs>
 </svg>
+<svg style="height: 0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2" fill="#172f57">
+    <defs>
+        <g id="P0">
+            <rect width="100%" height="100%" fill="none" />
+            <circle cx="1" cy="0" r=".1" />
+            <circle cx="1" cy="2" r=".1" />
+            <circle cy="1" cx="0" r=".1" />
+            <circle cy="1" cx="2" r=".1" />
+        </g>
+        <g id="P2">
+            <rect width="100%" height="100%" fill="none" />
+            <circle cx="1" cy="0" r=".3" />
+            <circle cx="1" cy="2" r=".3" />
+            <circle cy="1" cx="0" r=".3" />
+            <circle cy="1" cx="2" r=".3" />
+        </g>
+        <g id="P4">
+            <rect width="100%" height="100%" fill="none" />
+            <circle cx="1" cy="0" r=".5" />
+            <circle cx="1" cy="2" r=".5" />
+            <circle cy="1" cx="0" r=".5" />
+            <circle cy="1" cx="2" r=".5" />
+        </g>
+        <g id="P6">
+            <rect width="100%" height="100%" fill="none" />
+            <circle cx="1" cy="0" r=".7" />
+            <circle cx="1" cy="2" r=".7" />
+            <circle cy="1" cx="0" r=".7" />
+            <circle cy="1" cx="2" r=".7" />
+        </g>
+        <g id="P8">
+            <rect width="100%" height="100%" fill="none" />
+            <circle cx="1" cy="0" r=".9" />
+            <circle cx="1" cy="2" r=".9" />
+            <circle cy="1" cx="0" r=".9" />
+            <circle cy="1" cx="2" r=".9" />
+        </g>
+        <filter
+            id="halftone"
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            color-interpolation-filters="sRGB"
+        >
+            <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0
+                        0 0 0 0 0
+                        0 0 0 0 0
+                        -0.21 -0.72 -0.07 1 0"
+                result="A"
+            />
+            <feImage width="4" height="4" href="#P0" />
+            <feTile result="T0" />
+            <feImage width="4" height="4" href="#P2" />
+            <feTile result="T2" />
+            <feImage width="4" height="4" href="#P4" />
+            <feTile result="T4" />
+            <feImage width="4" height="4" href="#P6" />
+            <feTile result="T6" />
+            <feImage width="4" height="4" href="#P8" />
+            <feTile result="T8" />
+            <feComponentTransfer in="A">
+                <feFuncA type="table" tableValues="0 1 1 1 1 1"></feFuncA>
+            </feComponentTransfer>
+            <feComposite operator="in" in="T0" result="L0" />
+            <feComponentTransfer in="A">
+                <feFuncA type="table" tableValues="0 0 1 1 1 1"></feFuncA>
+            </feComponentTransfer>
+            <feComposite operator="in" in="T2" result="L2" />
+            <feComponentTransfer in="A">
+                <feFuncA type="table" tableValues="0 0 0 1 1 1"></feFuncA>
+            </feComponentTransfer>
+            <feComposite operator="in" in="T4" result="L4" />
+            <feComponentTransfer in="A">
+                <feFuncA type="table" tableValues="0 0 0 0 1 1"></feFuncA>
+            </feComponentTransfer>
+            <feComposite operator="in" in="T6" result="L6" />
+            <feComponentTransfer in="A">
+                <feFuncA type="table" tableValues="0 0 0 0 0 1"></feFuncA>
+            </feComponentTransfer>
+            <feComposite operator="in" in="T8" result="L8" />
+            <feMerge>
+                <feMergeNode in="L0"></feMergeNode>
+                <feMergeNode in="L2"></feMergeNode>
+                <feMergeNode in="L4"></feMergeNode>
+                <feMergeNode in="L6"></feMergeNode>
+                <feMergeNode in="L8"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+</svg>

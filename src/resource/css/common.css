@@ -154,3 +154,6 @@ footer .hits {
 }
 .stop1 { stop-color: hwb(var(--stop-1) 40% 50%); }
 .stop2 { stop-color: hwb(var(--stop-2) 40% 50%); }
+.victor-nojs {
+    filter: url(#halftone);
+}

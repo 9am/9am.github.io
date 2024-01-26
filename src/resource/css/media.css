@@ -4,6 +4,15 @@
         filter: invert(1) hue-rotate(.5turn);
     }
 }
+@media (scripting: none) {
+    .item .button {
+        display: flex;
+        align-items: center;
+    }
+    .item .victor {
+        display: none;
+    }
+}
 @media screen and (max-width: 1920px) {
 }
 @media screen and (max-width: 1280px) {

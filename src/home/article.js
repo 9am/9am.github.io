@@ -38,6 +38,9 @@ const renderIssue = ({
 }) => `
     <article class="item" id="${id}" data-next="${next}">
         <a class="button" href="${href}" target="_blank" aria-label="${title}" style="aspect-ratio: ${ratio.split(':').join('/')}">
+            <noscript>
+                <img class="victor-nojs" src="${src}" loading="lazy" alt="thumbnail" />
+            </noscript>
             <img-victor class="victor" data-src="${src}" ratio="${ratio}"></img-victor>
         </a>
         <section class="info">

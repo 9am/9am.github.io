@@ -49,6 +49,14 @@ header .tile {
 footer {
     margin-top: auto;
 }
+a {
+    display: inline-block;
+    color: var(--color-dark);
+    text-decoration-line: none;
+}
+a:hover {
+    text-decoration-line: underline;
+}
 .tile {
     fill: var(--color-bg);
 }

@@ -44,7 +44,7 @@ const renderIssue = ({
             <img-victor class="victor" data-src="${src}" ratio="${ratio}"></img-victor>
         </a>
         <section class="info">
-            <h2 class="title">${title}</h2>
+            <h2 class="title"><a href="${href}" target="_blank">${title}</a></h2>
             <time class="date" datetime="${publishedAt}">${new Date(publishedAt).toDateString()}</time>
             <p class="desc">${desc}</p>
             <div class="tags">${renderLabels(labels)}</div>

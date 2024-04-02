@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 10 10" stroke-width="0" id="9am">
+  <defs>
+    <rect id="p" width="10" height="10" stroke="white" />
+    <rect id="n" width="10" height="10" stroke="black" fill="white" />
+    <mask id="m"><rect width="10" height="10" rx="5" fill="white" /></mask>
+    <mask id="l">
+        <use href="#n" />
+        <use href="#n" x="-2" y="-2" transform="rotate(-15, 5, 5)" stroke-width=".1" />
+        <use href="#n" x="-3" y="-3" transform="rotate(-10, 5, 5)" stroke-width=".2" />
+        <use href="#n" x="-4" y="-4" transform="rotate(-5, 5, 5)" stroke-width=".3" />
+        <use href="#p" x="-5" y="-5" />
+        <use href="#p" x="-6" y="-6" transform="rotate(-5, 5, 5)" stroke-width=".3" />
+        <use href="#p" x="-7" y="-7" transform="rotate(-10, 5, 5)" stroke-width=".2" />
+        <use href="#p" x="-8" y="-8" transform="rotate(-15, 5, 5)" stroke-width=".1" />
+    </mask>
+  </defs>
+  <g mask="url(#m)" fill="#EC1F5A">
+    <use href="#p" mask="url(#l)" />
+  </g>
+</svg>

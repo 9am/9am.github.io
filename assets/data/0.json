@@ -1,6 +1,23 @@
 {
   "nodes": [
     {
+      "id": "I_kwDOFkEW486F1Ew6",
+      "title": "How to build a 3D eye staring at the mouse with only CSS",
+      "body": "<blockquote></blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/c287b5e7-2be0-4051-8eab-4c88a48447d5\" alt=\"eye\" width=\"50%\" data-ratio=\"1:1\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/19\" alt=\"hits\" width=\"150px\" />",
+      "publishedAt": "2024-04-16T07:08:15Z",
+      "number": 19,
+      "labels": {
+        "nodes": [
+          {
+            "name": "css"
+          },
+          {
+            "name": "animation"
+          }
+        ]
+      }
+    },
+    {
       "id": "I_kwDOFkEW4855wzts",
       "title": "Transition on an active highlight - it&#39;s not as simple as it seems",
       "body": "<blockquote>After fixing a bug, I found that to achieve this on the web takes more effort than I expected. However, the new view transition API offers a straightforward solution.</blockquote><img src=\"https://github.com/9am/9am.github.io/assets/1435457/8bc5f971-4bf2-42a3-8e37-45b2788fa691\" alt=\"spotlight\" width=\"50%\" data-ratio=\"640:427\" /><img src=\"https://hits.deno.dev/api?referer=https://github.com/9am/9am.github.io/issues/18\" alt=\"hits\" width=\"150px\" />",
@@ -308,7 +325,7 @@
       }
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "pageInfo": {
     "hasNextPage": false,
     "nextPage": 1

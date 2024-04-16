@@ -10,8 +10,17 @@
             <link>http://9am.github.io/</link>
         </image>
         <language>en-us</language>
-        <lastBuildDate>Mon, 18 Dec 2023 02:23:22 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 16 Apr 2024 07:47:42 GMT</lastBuildDate>
         <managingEditor>tech.9am@gmail.com</managingEditor>
+        <item>
+            <title>How to build a 3D eye staring at the mouse with only CSS</title>
+            <link>https://github.com/9am/9am.github.io/issues/19</link>
+            <description></description>
+            <author>tech.9am@gmail.com</author>
+            <pubDate>Tue, 16 Apr 2024 07:08:15 GMT</pubDate>
+            <guid>I_kwDOFkEW486F1Ew6</guid>
+            <enclosure url="https://github.com/9am/9am.github.io/assets/1435457/c287b5e7-2be0-4051-8eab-4c88a48447d5" />
+        </item>
         <item>
             <title>Transition on an active highlight - it&#39;s not as simple as it seems</title>
             <link>https://github.com/9am/9am.github.io/issues/18</link>
